@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="nhan.natc.laundry.MainActivity">
+    <item
+        android:id="@+id/action_add_user"
+        android:icon="@drawable/ic_add_user"
+        android:title=""
+        app:showAsAction="ifRoom"/>
+</menu>

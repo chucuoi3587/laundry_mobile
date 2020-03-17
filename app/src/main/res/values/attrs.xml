@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditView">
+        <attr name="hint" format="string"/>
+        <attr name="text" format="string"/>
+        <attr name="isEdit" format="boolean"/>
+        <attr name="isPassword" format="boolean"/>
+        <attr name="isShowFloatHint" format="boolean"/>
+        <attr name="edtStartIcon" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="CustomSearchEditText">
+        <attr name="startIcon" format="reference"/>
+        <attr name="endIcon" format="reference"/>
+        <attr name="extraIcon" format="reference"/>
+        <attr name="hintSearch" format="string"/>
+        <attr name="floatHintSearch" format="string"/>
+        <attr name="hintEnable" format="boolean"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="reference|color"/>
+        <attr name="textFont" format="reference"/>
+        <attr name="tag" format="reference"/>
+        <attr name="inputType">
+            <flag name="none" value="0x00000000" />
+            <flag name="text" value="0x00000001" />
+            <flag name="number" value="0x00000002" />
+            <flag name="phone" value="0x00000003" />
+            <flag name="textEmailAddress" value="0x00000021" />
+            <flag name="numberDecimal" value="0x00002002" />
+        </attr>
+        <attr name="isQuickClearText" format="boolean"/>
+        <attr name="maxlength" format="integer"/>
+    </declare-styleable>
+</resources>

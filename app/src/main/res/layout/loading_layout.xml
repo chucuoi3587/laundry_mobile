@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="isLoading"
+            type="Boolean" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color60Transparent"
+        android:gravity="center"
+        android:visibility="@{isLoading ? View.VISIBLE : View.INVISIBLE}">
+
+        <ProgressBar
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:indeterminate="true"
+            style="?android:attr/progressBarStyle"
+            android:indeterminateDrawable="@drawable/circular_progress_bar"/>
+    </LinearLayout>
+</layout>

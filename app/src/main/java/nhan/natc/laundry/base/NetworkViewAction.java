@@ -1,0 +1,11 @@
+package nhan.natc.laundry.base;
+
+public enum NetworkViewAction {
+    SHOW_ERROR_BAD_REQUEST,
+    SHOW_ERROR_CONNECT_EXCEPTION,
+    SHOW_ERROR_SERVER_ERROR,
+    SHOW_ERROR_FORBIDDEN_ACCESS,
+    SHOW_ERROR_UNAUTHORIZE,
+    SHOW_ERROR_NETWORK_TIMEOUT,
+    LOGOUT,
+}

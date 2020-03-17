@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="nhan.natc.laundry.ui.home.viewmodel.HomeViewModel" />
+    </data>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/DrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include
+                layout="@layout/status_bar"/>
+            <include
+                layout="@layout/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:id="@+id/flContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/menu_header_layout"
+            app:menu="@menu/slide_menu_admin"
+            android:theme="@style/NavigationTheme"
+            android:fitsSystemWindows="true"
+            android:background="@color/colorSlideMenu"
+            app:itemTextAppearance="@style/SlideMenuTextViewItem"
+            app:itemShapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Nav"
+            app:itemBackground="@drawable/left_nav_item_shape"
+            android:layout_gravity="start|left"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>
+

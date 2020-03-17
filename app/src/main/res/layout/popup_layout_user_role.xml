@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="nhan.natc.laundry.ui.user.userdetail.viewmodel.UserRoleViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <ImageView
+            android:id="@+id/grayLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/filter_margin_top"
+            android:src="@drawable/gray_line"
+            android:padding="@dimen/normal_padding"
+            android:background="@drawable/filter_popup_border"
+            android:contentDescription="@null"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/okBtn"
+            android:background="@color/colorMainBackground"
+            android:paddingTop="@dimen/country_gap"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorMainBackground"
+            android:paddingTop="@dimen/left_right_padding">
+            <Button
+                android:id="@+id/okBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.7"
+                style="@style/ButtonStyle"
+                android:text="@string/ok_lbl"
+                android:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/button_blue_border_selector"
+                android:layout_marginBottom="@dimen/country_gap"
+                android:onClick="@{() -> viewmodel.onDone()}"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

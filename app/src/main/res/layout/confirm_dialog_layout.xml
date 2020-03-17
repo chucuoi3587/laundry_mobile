@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorTransparent"
+    android:padding="@dimen/left_right_padding"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/country_gap"
+        android:background="@drawable/home_top_border_layout"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alert"/>
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/NormalText"
+            android:gravity="center"
+            android:layout_margin="@dimen/normal_padding"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="@dimen/country_gap">
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_transparent_border_layout"
+                style="@style/ButtonDialogStyle"
+                android:textColor="@color/colorDarkBlue"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginRight="@dimen/country_gap"/>
+
+            <Button
+                android:id="@+id/okBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/ButtonDialogStyle"
+                android:fontFamily="@font/montserrat_medium" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

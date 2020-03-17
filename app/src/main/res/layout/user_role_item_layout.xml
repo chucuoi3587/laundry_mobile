@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/country_gap"
+    android:layout_marginLeft="@dimen/country_gap"
+    android:layout_marginRight="@dimen/country_gap"
+    android:layout_marginTop="@dimen/country_gap"
+    android:gravity="center">
+    <ImageView
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/checkbox_off"/>
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        style="@style/NormalText"
+        android:textColor="@color/colorTextNormal"
+        android:layout_marginLeft="@dimen/country_gap"/>
+</LinearLayout>
+

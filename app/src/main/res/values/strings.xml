@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Laundry</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="username_lbl">Username</string>
+    <string name="email">Email</string>
+    <string name="password_lbl">Password</string>
+    <string name="name_lbl">Name</string>
+    <string name="address_lbl">Address</string>
+    <string name="phone_lbl">Phone</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="user_role">User Role</string>
+    <string name="email_empty_warning">Your email is empty</string>
+    <string name="password_empty_warning">Your password is empty</string>
+    <string name="email_format_warning">Your email format is not right</string>
+    <string name="password_warning">Your password is not right</string>
+    <string name="login_upcase">LOGIN</string>
+    <string name="login_failed">Your username/password is incorrect. Please try again.</string>
+    <string name="server_error">Cannot connect to server</string>
+    <string name="error_internet_connection_warning">Please check your internet connection and try again.</string>
+    <string name="ok_lbl">OK</string>
+    <string name="cancel_lbl">CANCEL</string>
+    <string name="yes_lbl">YES</string>
+    <string name="no_lbl">NO</string>
+    <string name="save_lbl">SAVE</string>
+    <string name="network_switch_off_warning">Please connect to the internet to use app.</string>
+    <string name="expired_token_warning_message">Your session has been expired, please login again!</string>
+
+    <!-- slide menu -->
+    <string name="add_user">Add User</string>
+    <string name="customer_profile">Customer Profiles</string>
+
+    <!-- customer profile -->
+</resources>

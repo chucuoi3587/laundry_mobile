@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="nhan.natc.laundry.ui.register.viewmodel.RegisterUserViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <nhan.natc.laundry.base.customview.CustomSearchEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnable="true"
+            app:hintSearch="@string/email"
+            app:isQuickClearText="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tag="@+id/email"
+            android:layout_margin="@dimen/country_gap"/>
+
+        <nhan.natc.laundry.base.customview.CustomSearchEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnable="true"
+            app:hintSearch="@string/password_lbl"
+            app:isQuickClearText="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:tag="@+id/password"
+            android:layout_margin="@dimen/country_gap"/>
+
+        <nhan.natc.laundry.base.customview.CustomSearchEditText
+            android:id="@+id/firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnable="true"
+            app:hintSearch="@string/first_name"
+            app:isQuickClearText="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:tag="@+id/firstName"
+            android:layout_margin="@dimen/country_gap"/>
+
+        <nhan.natc.laundry.base.customview.CustomSearchEditText
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnable="true"
+            app:hintSearch="@string/last_name"
+            app:isQuickClearText="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstName"
+            app:tag="@+id/lastName"
+            android:layout_margin="@dimen/country_gap"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/roleSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastName"
+            android:layout_margin="@dimen/country_gap"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/loading_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

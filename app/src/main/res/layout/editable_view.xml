@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <include
+        layout="@layout/custom_login_layout"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/statusTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/colorTextError"
+        android:layout_marginLeft="@dimen/login_error_text_margin_left"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:visibility="gone"/>
+</LinearLayout>
+

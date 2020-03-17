@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/country_gap"
+        android:right="@dimen/country_gap"
+        android:top="@dimen/normal_padding"
+        android:bottom="@dimen/normal_padding">
+
+        <shape>
+            <padding android:left="@dimen/country_gap" />
+            <solid android:color="@drawable/left_nav_item_selector"/>
+            <corners android:radius="5dp"/>
+        </shape>
+
+    </item>
+</layer-list>

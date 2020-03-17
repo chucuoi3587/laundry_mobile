@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#003C71</color>
+    <color name="colorPrimaryDark">#003C71</color>
+    <color name="colorAccent">#7D90AA</color>
+    <color name="colorDarkBlue">#003C71</color>
+    <color name="colorLightBlue">#186BFE</color>
+    <color name="colorGray">#7D90AA</color>
+    <color name="colorName">#092058</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorMainBackground">#ECF0F7</color>
+    <color name="colorTextError">#FE685A</color>
+    <color name="colorTextNormal">#4F6C8D</color>
+    <color name="colorTextBlockAddr">#96A5B8</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="color60Transparent">#30000000</color>
+    <color name="colorSlideMenu">#F7F8FA</color>
+    <color name="colorRoundedName">#DFE6ED</color>
+    <color name="colorCardBackground">#FCFCFC</color>
+    <color name="colorUnderLine">#4985FE</color>
+    <color name="colorStatusConfirm">#713EFE</color>
+    <color name="colorTextStatusWarning">#00B4FE</color>
+    <color name="colorBgStatusWarning">#EAF8FE</color>
+    <color name="colorTextStatusSuccess">#45CE96</color>
+    <color name="colorBgStatusSuccess">#EBFFF7</color>
+    <color name="colorBgStatusError">#FEEBEA</color>
+    <color name="colorRangeCalendarDay">#CADBFB</color>
+    <color name="colorBgReadNotification">#F4F6F7</color>
+    <color name="colorOneLogin">#418BB8</color>
+    <color name="colorSelectedOneLogin">#37769c</color>
+    <color name="colorRework">#ECA748</color>
+</resources>

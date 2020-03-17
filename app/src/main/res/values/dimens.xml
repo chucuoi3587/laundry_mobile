@@ -1,0 +1,39 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_size_super_small">8dp</dimen>
+    <dimen name="text_size_small_10">10dp</dimen>
+    <dimen name="text_size_small">11dp</dimen>
+    <dimen name="text_size_small_12">12dp</dimen>
+    <dimen name="text_size">13dp</dimen>
+    <dimen name="text_size_normal">15dp</dimen>
+    <dimen name="text_size_normal_16">16dp</dimen>
+    <dimen name="text_size_title">17dp</dimen>
+    <dimen name="text_size_large">18dp</dimen>
+    <dimen name="text_size_super">20dp</dimen>
+
+    <dimen name="normal_padding">5dp</dimen>
+    <dimen name="login_float_hint_margin_left">53dp</dimen>
+    <dimen name="login_float_hint_margin_top">10dp</dimen>
+    <dimen name="login_error_text_margin_left">16dp</dimen>
+
+    <dimen name="stroke_boder_size">1dp</dimen>
+    <dimen name="country_gap">10dp</dimen>
+    <dimen name="left_right_padding">20dp</dimen>
+    <dimen name="button_padding_left">50dp</dimen>
+    <dimen name="button_padding_top">5dp</dimen>
+    <dimen name="button_corner_radius">25dp</dimen>
+    <dimen name="button_margin">30dp</dimen>
+    <dimen name="icon_size">32dp</dimen>
+
+    <dimen name="toggle_width_size">40dp</dimen>
+    <dimen name="toggle_height_size">25dp</dimen>
+    <dimen name="one_dp">1dp</dimen>
+    <dimen name="two_dp">2dp</dimen>
+    <dimen name="avatar_size">64dp</dimen>
+    <dimen name="slide_menu_item_height">80dp</dimen>
+    <dimen name="statusBarHeight">0dp</dimen>
+    <dimen name="appBarTopMargin">0dp</dimen>
+    <dimen name="shadow_padding">8dp</dimen>
+    <dimen name="status_corner_radius">10dp</dimen>
+    <dimen name="filter_margin_top">90dp</dimen>
+</resources>
