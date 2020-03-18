@@ -16,10 +16,11 @@ import nhan.natc.laundry.data.local.Customer;
 
 public class CustomerRecyclerAdapter extends RecyclerView.Adapter<CustomerRecyclerAdapter.ViewHolder> {
 
-    private List<Customer> mCustomer = new ArrayList<>();
+    private List<Customer> mCustomers = new ArrayList<>();
     public interface CustomerListener {
         void onItemClick(int position);
         void onPhoneClick(int position);
+        void onReachBottom();
     }
     private CustomerListener mListener;
 
@@ -29,10 +30,16 @@ public class CustomerRecyclerAdapter extends RecyclerView.Adapter<CustomerRecycl
 
     public void addItems(List<Customer> customers) {
         if (customers != null && !customers.isEmpty()) {
-            int start = mCustomer.size();
-            mCustomer.addAll(customers);
+            int start = mCustomers.size();
+            mCustomers.addAll(customers);
             notifyItemRangeChanged(start, customers.size());
         }
+    }
+
+    public void updateItems(List<Customer> customers) {
+        mCustomers.clear();
+        mCustomers.addAll(customers);
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -45,18 +52,20 @@ public class CustomerRecyclerAdapter extends RecyclerView.Adapter<CustomerRecycl
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        if (position == mCustomers.size() - 1)
+            mListener.onReachBottom();
         holder.onBind(getItem(position));
     }
 
     public Customer getItem(int position) {
-        if (position < mCustomer.size())
-            return mCustomer.get(position);
+        if (position < mCustomers.size())
+            return mCustomers.get(position);
         return null;
     }
 
     @Override
     public int getItemCount() {
-        return mCustomer.size();
+        return mCustomers.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

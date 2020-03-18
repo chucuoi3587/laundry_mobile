@@ -13,11 +13,19 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorMainBackground"/>
+            android:background="@color/colorMainBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
         <include
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             layout="@layout/loading_layout"
-            app:isLoading="@{viewmodel.isLoading}"/>
+            app:isLoading="@{viewmodel.isLoading}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

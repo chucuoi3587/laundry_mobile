@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import io.reactivex.Observable;
 import nhan.natc.laundry.data.local.Customer;
+import nhan.natc.laundry.data.remote.model.CustomerAllRequest;
 import nhan.natc.laundry.data.remote.model.CustomerRequest;
 import nhan.natc.laundry.data.remote.model.Resource;
 import nhan.natc.laundry.data.remote.service.CustomerService;
@@ -18,8 +19,8 @@ public class CustomerRepository {
         this.mCustomerService = customerService;
     }
 
-    public Observable<Resource<List<Customer>>> getAll() {
-        return mCustomerService.getAll();
+    public Observable<Resource<List<Customer>>> getAll(CustomerAllRequest request) {
+        return mCustomerService.getAll(request);
     }
 
     public Observable<Resource<Customer>> getCustomer(long customerId) {

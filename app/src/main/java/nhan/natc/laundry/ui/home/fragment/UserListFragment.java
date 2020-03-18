@@ -93,7 +93,14 @@ public class UserListFragment extends BaseFragment<FragmentUserListBinding, User
     }
 
     private void initObservation() {
-        userListViewModel.getListUser().observe(getViewLifecycleOwner(), users -> mAdapter.addItems(users));
+        userListViewModel.getListUser().observe(getViewLifecycleOwner(), users -> {
+            if (users != null && !users.isEmpty()) {
+                if (userListViewModel.isLoadMore())
+                    mAdapter.addItems(users);
+                else
+                    mAdapter.updateItems(users);
+            }
+        });
     }
 
     @Override
@@ -104,5 +111,11 @@ public class UserListFragment extends BaseFragment<FragmentUserListBinding, User
             intent.putExtra(Constants.USER_ID, user.getId());
             startActivityForResult(intent, 1000);
         }
+    }
+
+    @Override
+    public void onReachBottom() {
+        if (userListViewModel.hasLoadMore())
+            userListViewModel.loadMoreUser();
     }
 }

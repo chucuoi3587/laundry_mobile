@@ -10,6 +10,7 @@ import nhan.natc.laundry.data.local.User;
 import nhan.natc.laundry.data.local.UserRole;
 import nhan.natc.laundry.data.remote.model.LoginRequest;
 import nhan.natc.laundry.data.remote.model.Resource;
+import nhan.natc.laundry.data.remote.model.UserAllRequest;
 import nhan.natc.laundry.data.remote.model.UserRequest;
 import nhan.natc.laundry.data.remote.service.UserService;
 
@@ -30,8 +31,8 @@ public class UserRepository {
         return mUserService.getMyInfo();
     }
 
-    public Observable<Resource<List<User>>> getAllUser() {
-        return mUserService.getAllUser();
+    public Observable<Resource<List<User>>> getAllUser(UserAllRequest request) {
+        return mUserService.getAllUser(request);
     }
 
     public Observable<Resource<User>> getUserById(long id) {

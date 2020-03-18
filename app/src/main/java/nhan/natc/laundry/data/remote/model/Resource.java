@@ -16,6 +16,9 @@ public class Resource<T> {
 
     public final T data;
 
+    @SerializedName("has_more_record")
+    public boolean hasMoreRecord;
+
     @SerializedName("error_description")
     public final String errorDescription;
 

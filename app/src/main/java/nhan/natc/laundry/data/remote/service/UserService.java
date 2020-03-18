@@ -8,6 +8,7 @@ import nhan.natc.laundry.data.local.User;
 import nhan.natc.laundry.data.local.UserRole;
 import nhan.natc.laundry.data.remote.model.LoginRequest;
 import nhan.natc.laundry.data.remote.model.Resource;
+import nhan.natc.laundry.data.remote.model.UserAllRequest;
 import nhan.natc.laundry.data.remote.model.UserRequest;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -22,8 +23,8 @@ public interface UserService {
     @GET("user/me")
     Observable<Resource<User>> getMyInfo();
 
-    @GET("user/all")
-    Observable<Resource<List<User>>> getAllUser();
+    @POST("user/all")
+    Observable<Resource<List<User>>> getAllUser(@Body UserAllRequest request);
 
     @GET("user/{id}")
     Observable<Resource<User>> getUserById(@Path("id") long id);

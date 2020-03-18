@@ -4,6 +4,7 @@ import java.util.List;
 
 import io.reactivex.Observable;
 import nhan.natc.laundry.data.local.Customer;
+import nhan.natc.laundry.data.remote.model.CustomerAllRequest;
 import nhan.natc.laundry.data.remote.model.CustomerRequest;
 import nhan.natc.laundry.data.remote.model.Resource;
 import retrofit2.http.Body;
@@ -12,8 +13,8 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface CustomerService {
-    @GET("customer/all")
-    Observable<Resource<List<Customer>>> getAll();
+    @POST("customer/all")
+    Observable<Resource<List<Customer>>> getAll(@Body CustomerAllRequest request);
 
     @GET("customer/{customerId}")
     Observable<Resource<Customer>> getCustomer(@Path("customerId") long customerId);

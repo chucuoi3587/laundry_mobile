@@ -80,7 +80,12 @@ public class CustomerListActivity extends BaseActivity<ActivityCustomerListBindi
 
     private void initObservation() {
         customerListViewModel.getCustomer().observe(this, customers -> {
-            mAdapter.addItems(customers);
+            if (customers != null && !customers.isEmpty()) {
+                if (customerListViewModel.isLoadMore())
+                    mAdapter.addItems(customers);
+                else
+                    mAdapter.updateItems(customers);
+            }
         });
     }
 
@@ -103,13 +108,19 @@ public class CustomerListActivity extends BaseActivity<ActivityCustomerListBindi
     }
 
     @Override
+    public void onReachBottom() {
+        if (customerListViewModel.hasLoadMore())
+            customerListViewModel.loadMoreCustomers();
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case Constants.REQUEST_CUSTOMER_DETAIL:
                 customerListViewModel.setIsLock(false);
                 if (resultCode == RESULT_OK) {
-                    customerListViewModel.fetchCustomer();
+                    customerListViewModel.loadCustomers();
                 }
                 break;
         }

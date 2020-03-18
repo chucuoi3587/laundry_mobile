@@ -22,6 +22,7 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
     private Context mContext;
     public interface UserListListener {
         void onItemSelected(int position);
+        void onReachBottom();
     }
     private UserListListener mListener;
 
@@ -33,6 +34,12 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
         int start = mUsers.size();
         this.mUsers.addAll(users);
         notifyItemRangeChanged(start, users.size());
+    }
+
+    public void updateItems(List<User> users) {
+        mUsers.clear();
+        mUsers.addAll(users);
+        notifyDataSetChanged();
     }
 
     public User getItem(int position) {
@@ -52,6 +59,8 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        if (position == mUsers.size() - 1)
+            mListener.onReachBottom();
         holder.onBind(getItem(position));
     }
 
