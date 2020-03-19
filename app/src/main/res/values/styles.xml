@@ -143,4 +143,34 @@
         <item name="android:windowEnterAnimation">@anim/slide_up</item>
         <item name="android:windowExitAnimation">@anim/slide_down</item>
     </style>
+
+    <style name="BottomNavigation">
+        <item name="android:background">@color/colorWhite</item>
+        <item name="itemIconTint">@drawable/bottom_nav_icon_selector</item>
+        <!--        <item name="itemTextColor">@drawable/bottom_nav_icon_selector</item>-->
+        <item name="paddingStart">@dimen/normal_padding</item>
+        <item name="paddingEnd">@dimen/normal_padding</item>
+        <item name="android:paddingTop">@dimen/normal_padding</item>
+        <item name="android:paddingBottom">@dimen/normal_padding</item>
+        <item name="android:theme">@style/Widget.BottomNavigationView</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigation.TextStyleActive</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigation.TextStyleInactive</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">@dimen/text_size</item>
+        <!--        <item name="fontFamily">@font/your_font</item>-->
+    </style>
+
+    <style name="BottomNavigation.TextStyleActive">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/colorLightBlue</item>
+    </style>
+    <style name="BottomNavigation.TextStyleInactive">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/colorTextNormal</item>
+    </style>
 </resources>

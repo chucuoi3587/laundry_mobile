@@ -25,6 +25,7 @@ import nhan.natc.laundry.base.BaseActivity;
 import nhan.natc.laundry.data.local.User;
 import nhan.natc.laundry.databinding.ActivityHomeBinding;
 import nhan.natc.laundry.ui.customer.customerlist.activity.CustomerListActivity;
+import nhan.natc.laundry.ui.home.fragment.MainFragment;
 import nhan.natc.laundry.ui.home.fragment.UserListFragment;
 import nhan.natc.laundry.ui.home.viewmodel.HomeViewModel;
 import nhan.natc.laundry.util.CommonUtils;
@@ -105,7 +106,7 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewMode
                 fragment = new UserListFragment();
                 break;
             case 2:
-
+                fragment = new MainFragment();
                 break;
             case 3:
 
